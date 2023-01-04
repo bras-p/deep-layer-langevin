@@ -1,4 +1,4 @@
-# Langevin algorithms for Markovian Neural Networks and Deep Stochastic control
+# Langevin algorithms for very deep Neural Networks with application to image classification
 
 Training a very deep neural network is a challenging task, as the deeper a neural network is, the more non-linear it is.
 We compare the performances of various preconditioned Langevin algorithms with their non-Langevin counterparts for the training of neural networks of increasing depth. For shallow neural networks, Langevin algorithms do not lead to any improvement, however the deeper the network is and the greater are the gains provided by Langevin algorithms. Adding noise to the gradient descent allows to escape from local traps, which are more frequent for very deep neural networks.
