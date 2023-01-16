@@ -1,4 +1,4 @@
-# Langevin algorithms for very deep Neural Networks with application to image classification
+# [Langevin algorithms for very deep Neural Networks with application to image classification](https://arxiv.org/abs/2212.14718)
 
 Training a very deep neural network is a challenging task, as the deeper a neural network is, the more non-linear it is.
 We compare the performances of various preconditioned Langevin algorithms with their non-Langevin counterparts for the training of neural networks of increasing depth. For shallow neural networks, Langevin algorithms do not lead to any improvement, however the deeper the network is and the greater are the gains provided by Langevin algorithms. Adding noise to the gradient descent allows to escape from local traps, which are more frequent for very deep neural networks.
@@ -8,6 +8,8 @@ We then prove the benefits of Langevin and Layer Langevin algorithms for the tra
 In this repository we give the implementation of Langevin and Layer Langevin optimizers as instances of the TensorFlow <tt>tf.keras.optimizers.Optimizer</tt> base class and we compare Langevin and non-Langevin optimizers for the training of various image classification problems.
 
 The machine learning library that is used is TensorFlow.
+
+[arXiv link](https://arxiv.org/abs/2212.14718)
 
 
 
