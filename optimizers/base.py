@@ -42,8 +42,9 @@ def set_langevin(model):
                     weight._langevin = 0.
 
             for trackable in model.layers[k]._self_tracked_trackables:
-                for weight in trackable._trainable_weights:
-                    if k in langevin_layers:
-                        weight._langevin = 1.
-                    else:
-                        weight._langevin = 0.
+                if hasattr(trackable, '_trainable_weights'):
+                    for weight in trackable._trainable_weights:
+                        if k in langevin_layers:
+                            weight._langevin = 1.
+                        else:
+                            weight._langevin = 0.
