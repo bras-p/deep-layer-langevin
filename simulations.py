@@ -64,7 +64,7 @@ sigma_schedule = tf.keras.optimizers.schedules.PiecewiseConstantDecay(boundaries
 
 model = model_builder.getModel()
 optimizers = [
-    # LAdam(learning_rate=lr_schedule, sigma=0.),
+    LAdam(learning_rate=lr_schedule, sigma=0.),
     # LAdam(learning_rate=lr_schedule, sigma=sigma_schedule),
     LayerLAdam(learning_rate=lr_schedule, sigma=sigma_schedule, langevin_layers=range(int(0.3*len(model.layers)))),
     # LayerLAdadelta(learning_rate=lr_schedule, sigma=0.),
@@ -75,7 +75,7 @@ optimizers = [
     # LayerLAdam(learning_rate=lr_schedule, sigma=sigma_schedule, langevin_layers=range(int(1.*len(model.layers)))),
 ]
 
-base = '../data/'
+base = './data/'
 
 
 
